@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Emitter.gd" type="Script" id=1]
+
+[node name="Emitter" type="Node2D"]
+
+script = ExtResource( 1 )
+object = null
+velocity = Vector2( 0, 0 )
+object_scale = Vector2( 0, 0 )
+velocity_random = Vector2( 0, 0 )
+object_scale_random = Vector2( 0, 0 )
+emitter_counter = 0
+dir = ""
+emitter_time = 0.0
+emitter = false
+object_life_time = 0.0
+area = Rect2( 0, 0, 0, 0 )
+oneshot = false
+size_diff = Vector2( 0, 0 )
+
+[node name="Timer" type="Timer" parent="." index="0"]
+
+process_mode = 1
+wait_time = 0.01
+one_shot = false
+autostart = false
+
+

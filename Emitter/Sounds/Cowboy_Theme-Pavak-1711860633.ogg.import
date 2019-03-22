@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Cowboy_Theme-Pavak-1711860633.ogg-d64a9e400441efbadb4ed461498db6a6.oggstr"
+
+[deps]
+
+source_file="res://Sounds/Cowboy_Theme-Pavak-1711860633.ogg"
+dest_files=[ "res://.import/Cowboy_Theme-Pavak-1711860633.ogg-d64a9e400441efbadb4ed461498db6a6.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

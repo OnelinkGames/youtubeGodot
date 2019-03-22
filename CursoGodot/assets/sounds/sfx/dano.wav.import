@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/dano.wav-51b3af114d7d536205bca32c84dfa1ba.sample"
+
+[deps]
+
+source_file="res://assets/sounds/sfx/dano.wav"
+dest_files=[ "res://.import/dano.wav-51b3af114d7d536205bca32c84dfa1ba.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

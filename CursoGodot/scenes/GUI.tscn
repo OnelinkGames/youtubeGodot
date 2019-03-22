@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scenes/GUI.gd" type="Script" id=1]
+[ext_resource path="res://assets/sprites/hud/progress-under.png" type="Texture" id=2]
+[ext_resource path="res://assets/sprites/hud/progress-above.png" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/hud/progress.png" type="Texture" id=4]
+[ext_resource path="res://assets/fonts/myFont.tres" type="DynamicFont" id=5]
+
+[node name="GUI" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="ProgressBar" type="TextureProgress" parent="."]
+margin_left = 20.0
+margin_right = 120.0
+margin_bottom = 40.0
+value = 100.0
+rounded = true
+texture_under = ExtResource( 2 )
+texture_over = ExtResource( 3 )
+texture_progress = ExtResource( 4 )
+
+[node name="score" type="RichTextLabel" parent="."]
+margin_top = 20.0
+margin_right = 100.0
+margin_bottom = 60.0
+custom_fonts/normal_font = ExtResource( 5 )
+text = "score: 0"
+
+[node name="HP" type="RichTextLabel" parent="."]
+margin_right = 100.0
+margin_bottom = 40.0
+custom_fonts/normal_font = ExtResource( 5 )
+text = "HP: "
+

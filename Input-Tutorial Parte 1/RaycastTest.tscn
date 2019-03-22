@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://RaycastTest.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/mole/idle/mole-idle-front.png" type="Texture" id=2]
+
+[node name="RaycastTest" type="Node2D" index="0"]
+
+position = Vector2( 497.464, 297.471 )
+scale = Vector2( 10, 10 )
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 2 )
+
+[node name="RayCast2D" type="RayCast2D" parent="." index="1"]
+
+enabled = false
+exclude_parent = true
+cast_to = Vector2( 20, 0 )
+collision_mask = 1
+
+

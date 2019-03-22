@@ -1,0 +1,226 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://Sprites/water_sine.shader" type="Shader" id=1]
+[ext_resource path="res://Sprites/Tiles/Acid (1).png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Tiles/Acid (2).png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Tiles/Tile (4).png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Tiles/Tile (5).png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Tiles/Tile (6).png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Tiles/BGTile (3).png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Objects/DoorLocked.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Tiles/Tile (1).png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Tiles/Tile (2).png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Tiles/Tile (3).png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Tiles/Tile (15).png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Objects/Barrel (1).png" type="Texture" id=13]
+
+[sub_resource type="ShaderMaterial" id=1]
+
+render_priority = 0
+shader = ExtResource( 1 )
+shader_param/tile_factor = 3.0
+shader_param/aspect_ratio = 0.5
+shader_param/time_factor = Vector2( 3, 3 )
+shader_param/offset_factor = Vector2( 3, 3 )
+shader_param/amplitude = Vector2( 0.01, 0.05 )
+_sections_unfolded = [ "shader_param" ]
+
+[sub_resource type="ShaderMaterial" id=2]
+
+render_priority = 0
+shader = ExtResource( 1 )
+shader_param/tile_factor = 1.0
+shader_param/aspect_ratio = 0.5
+shader_param/time_factor = Vector2( 3, 3 )
+shader_param/offset_factor = Vector2( 3, 3 )
+shader_param/amplitude = Vector2( 0.01, 0.05 )
+_sections_unfolded = [ "shader_param" ]
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 130, 130 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 130, 130 )
+
+[sub_resource type="RectangleShape2D" id=5]
+
+custom_solver_bias = 0.0
+extents = Vector2( 130, 130 )
+
+[sub_resource type="RectangleShape2D" id=6]
+
+custom_solver_bias = 0.0
+extents = Vector2( 130, 70 )
+
+[sub_resource type="RectangleShape2D" id=7]
+
+custom_solver_bias = 0.0
+extents = Vector2( 90, 120 )
+
+[node name="Tileset" type="Node2D" index="0"]
+
+_sections_unfolded = [ "Material" ]
+
+[node name="AcidAbove" type="Sprite" parent="." index="0"]
+
+material = SubResource( 1 )
+position = Vector2( 410, 130 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Material" ]
+
+[node name="AcidUnder" type="Sprite" parent="." index="1"]
+
+material = SubResource( 2 )
+position = Vector2( 130, 130 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Material" ]
+
+[node name="SpriteBoxLeft" type="Sprite" parent="." index="2"]
+
+position = Vector2( 410, 400 )
+texture = ExtResource( 4 )
+
+[node name="SpriteBoxCenter" type="Sprite" parent="." index="3"]
+
+position = Vector2( 700, 400 )
+texture = ExtResource( 5 )
+
+[node name="SpriteBoxRight" type="Sprite" parent="." index="4"]
+
+position = Vector2( 970, 400 )
+texture = ExtResource( 6 )
+
+[node name="BG" type="Sprite" parent="." index="5"]
+
+position = Vector2( 410, 670 )
+texture = ExtResource( 7 )
+
+[node name="Door" type="Sprite" parent="." index="6"]
+
+position = Vector2( 700, 780 )
+texture = ExtResource( 8 )
+
+[node name="SpritePlatformLeft" type="Sprite" parent="." index="7"]
+
+editor/display_folded = true
+position = Vector2( 690, 130 )
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="PlatformLeft" type="StaticBody2D" parent="SpritePlatformLeft" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpritePlatformLeft/PlatformLeft" index="0"]
+
+shape = SubResource( 3 )
+
+[node name="SpritePlatformCenter" type="Sprite" parent="." index="8"]
+
+editor/display_folded = true
+position = Vector2( 970, 130 )
+texture = ExtResource( 10 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="PlatformCenter" type="StaticBody2D" parent="SpritePlatformCenter" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpritePlatformCenter/PlatformCenter" index="0"]
+
+shape = SubResource( 4 )
+
+[node name="SpritePlatformRight" type="Sprite" parent="." index="9"]
+
+editor/display_folded = true
+position = Vector2( 130, 400 )
+texture = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="PlatformRight" type="StaticBody2D" parent="SpritePlatformRight" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpritePlatformRight/PlatformRight" index="0"]
+
+shape = SubResource( 5 )
+
+[node name="Platform" type="Sprite" parent="." index="10"]
+
+editor/display_folded = true
+position = Vector2( 130, 670 )
+texture = ExtResource( 12 )
+_sections_unfolded = [ "Visibility" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platform" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform/StaticBody2D" index="0"]
+
+position = Vector2( 0, -60 )
+shape = SubResource( 6 )
+
+[node name="Barrel" type="Sprite" parent="." index="11"]
+
+position = Vector2( 950, 670 )
+texture = ExtResource( 13 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Barrel" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrel/StaticBody2D2" index="0"]
+
+shape = SubResource( 7 )
+
+

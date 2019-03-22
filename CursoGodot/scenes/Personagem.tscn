@@ -1,0 +1,207 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://scenes/Personagem.gd" type="Script" id=1]
+[ext_resource path="res://assets/sprites/character/puloEQueda.png" type="Texture" id=2]
+[ext_resource path="res://assets/sprites/character/andar.png" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/character/parado.png" type="Texture" id=4]
+[ext_resource path="res://assets/sounds/sfx/dano.wav" type="AudioStream" id=5]
+[ext_resource path="res://assets/sounds/sfx/pular.wav" type="AudioStream" id=6]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 7.20568
+height = 12.6467
+
+[sub_resource type="Animation" id=2]
+resource_name = "andando"
+length = 1.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 3 ), ExtResource( 3 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:region_rect")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Rect2( 5, 5, 21, 33 ), Rect2( 41, 5, 18, 31 ), Rect2( 74, 5, 15, 31 ), Rect2( 104, 5, 18, 30 ), Rect2( 137, 5, 18, 33 ), Rect2( 170, 5, 17, 31 ), Rect2( 202, 5, 18, 31 ), Rect2( 235, 5, 21, 30 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "caindo"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 2 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:region_rect")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ Rect2( 37, 5, 18, 34 ), Rect2( 70, 5, 20, 34 ), Rect2( 105, 5, 20, 36 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+length = 2.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8, 2, 2.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Rect2( 5, 5, 19, 33 ), Rect2( 39, 5, 19, 33 ), Rect2( 73, 5, 19, 33 ), Rect2( 107, 5, 19, 33 ), Rect2( 141, 5, 19, 35 ), Rect2( 175, 5, 19, 35 ), Rect2( 209, 5, 19, 35 ), Rect2( 243, 5, 19, 35 ), Rect2( 277, 5, 19, 33 ), Rect2( 311, 4, 19, 33 ), Rect2( 345, 4, 19, 33 ), Rect2( 379, 4, 19, 33 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 4 ), ExtResource( 4 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 2 ), ExtResource( 2 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:region_rect")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ Rect2( 5, 5, 17, 34 ) ]
+}
+
+[sub_resource type="CapsuleShape2D" id=6]
+radius = 8.2613
+height = 12.6553
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 6.50272, 3.49634 )
+
+[sub_resource type="ParticlesMaterial" id=8]
+emission_shape = 1
+emission_sphere_radius = 13.3
+flag_disable_z = true
+spread = 180.0
+gravity = Vector3( 0, 98, 0 )
+initial_velocity = 21.1
+angular_velocity = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+color = Color( 0.870588, 0.0196078, 0.0196078, 1 )
+
+[node name="Personagem" type="KinematicBody2D" groups=[
+"personagem",
+]]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 105, 5, 20, 36 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/andando = SubResource( 2 )
+anims/caindo = SubResource( 3 )
+anims/parado = SubResource( 4 )
+anims/pulando = SubResource( 5 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+limit_left = 0
+limit_top = 0
+limit_right = 860
+limit_bottom = 560
+limit_smoothed = true
+smoothing_enabled = true
+editor_draw_limits = true
+editor_draw_drag_margin = true
+
+[node name="areaDano" type="Area2D" parent="."]
+editor/display_folded = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="areaDano"]
+shape = SubResource( 6 )
+
+[node name="areaBater" type="Area2D" parent="."]
+editor/display_folded = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="areaBater"]
+position = Vector2( 0.27055, 13.257 )
+shape = SubResource( 7 )
+
+[node name="Particles2D" type="Particles2D" parent="."]
+emitting = false
+amount = 200
+explosiveness = 1.0
+process_material = SubResource( 8 )
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="tempo_invencivel" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="tempoMorrer" type="Timer" parent="."]
+one_shot = true
+
+[node name="dano" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 5 )
+
+[node name="pulo" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 6 )
+
