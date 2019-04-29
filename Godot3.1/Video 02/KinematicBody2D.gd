@@ -3,7 +3,7 @@ extends KinematicBody2D
 #Constantes
 const GRAVITY = 300
 const UP = Vector2(0, -1)
-const SPEED = 100
+const SPEED = 300
 const JUMP = 180   
 
 #Variaveis
