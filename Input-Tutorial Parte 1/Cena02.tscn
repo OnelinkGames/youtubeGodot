@@ -5,12 +5,8 @@
 
 [node name="Cena02" type="Node2D"]
 
-[node name="Chest" parent="." index="0" instance=ExtResource( 1 )]
-
+[node name="Chest" parent="." instance=ExtResource( 1 )]
 position = Vector2( 524.94, 258.369 )
 
-[node name="Hero" parent="." index="1" instance=ExtResource( 2 )]
-
+[node name="Hero" parent="." instance=ExtResource( 2 )]
 position = Vector2( 531.091, 328.087 )
-
-

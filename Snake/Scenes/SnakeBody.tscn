@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scenes/SnakeBody.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Snake/snake-graphics.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Snake/Snake.png" type="Texture" id=2]
 
 [sub_resource type="Animation" id=1]
 resource_name = "cauda"
@@ -13,10 +13,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
+"times": PoolRealArray( 0, 0.6 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Rect2( 256, 128, 64, 64 ), Rect2( 256, 128, 64, 64 ) ]
+"values": [ Rect2( 0, 0, 64, 64 ), Rect2( 0, 0, 64, 64 ) ]
 }
 
 [sub_resource type="Animation" id=2]
@@ -54,18 +54,6 @@ tracks/0/keys = {
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 6.77598, 6.16105 )
 
-[sub_resource type="ParticlesMaterial" id=5]
-emission_shape = 1
-emission_sphere_radius = 17.18
-flag_disable_z = true
-spread = 122.04
-gravity = Vector3( 0, 98, 0 )
-initial_velocity = 20.0
-angular_velocity = 0.0
-orbit_velocity = 0.0
-orbit_velocity_random = 0.0
-color = Color( 0.345098, 0.890196, 0.0705882, 1 )
-
 [node name="SnakeBody" type="Node2D"]
 script = ExtResource( 1 )
 
@@ -74,7 +62,7 @@ scale = Vector2( 0.25, 0.25 )
 z_index = -1
 texture = ExtResource( 2 )
 region_enabled = true
-region_rect = Rect2( 256, 128, 64, 64 )
+region_rect = Rect2( 128, 0, 64, 64 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/cauda = SubResource( 1 )
@@ -89,14 +77,18 @@ anims/diagonal = SubResource( 3 )
 position = Vector2( -0.397755, 0.198879 )
 shape = SubResource( 4 )
 
-[node name="Particles2D" type="Particles2D" parent="."]
+[node name="Particles2D" type="CPUParticles2D" parent="."]
 emitting = false
 amount = 200
 lifetime = 0.5
 one_shot = true
 explosiveness = 1.0
-process_material = SubResource( 5 )
+emission_shape = 1
+emission_sphere_radius = 17.18
+spread = 122.04
+gravity = Vector2( 0, 98 )
+initial_velocity = 20.0
+color = Color( 0.345098, 0.890196, 0.0705882, 1 )
 
 [node name="tempo_morrer" type="Timer" parent="."]
 wait_time = 0.5
-

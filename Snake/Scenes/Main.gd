@@ -8,6 +8,9 @@ func _ready():
 	#Conectar tempo
 	$Timer.connect("timeout", self, "createFruit")
 	
+	#Conectar a gui
+	$Snake2D.connect("score", $CanvasLayer/Gui, "add_score")
+	
 	#Randomizar
 	randomize()
 	

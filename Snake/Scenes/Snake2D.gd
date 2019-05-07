@@ -2,13 +2,20 @@ extends Node2D
 
 #TODO
 #Erros Grid -1
-#Local de Spawnar personagem
+
+#Variaveis Export
+export var spawnar = Vector2()
+export var direcao_spawnar = Vector2()
+
+#Sinais
+signal score
 
 #Referências
 var corpo = preload("res://Scenes/SnakeBody.tscn")
+var score = 0
 
 #Variaveis
-var direction = Vector2(1, 0) #Direção que a Snake está se movendo
+var direction = Vector2() #Direção que a Snake está se movendo
 var offset = 8 #Offset para ajustar posição da Snake
 var referencias = [] #Referencias dos pedaços da Snake
 var posicao_ant = Vector2() #Variavel para guardar a posição anterior
@@ -30,7 +37,7 @@ func _ready():
 	$colisor.connect("body_entered", self, "colidirBody")
 	
 	#Definir posição inicial da Snake
-	var posicao = Grid.gridParaPixels(Vector2(Grid.largura / 2,Grid.altura / 2), 8)
+	var posicao = Grid.gridParaPixels(spawnar, offset)
 	position = posicao
 	
 	#Recuperar a posição atual
@@ -39,6 +46,9 @@ func _ready():
 	
 	#Adicionar referência da Cabeça da Snake
 	referencias.append(self)
+	
+	#Direção da Snake
+	direction = direcao_spawnar * -1
 	
 	#Adicionar dois pedaços do corpo
 	var pos = posicao_atual
@@ -51,11 +61,11 @@ func _ready():
 		
 		#Arrumar Posição
 		var posicao_local = pos
-		posicao_local.x -= 1
+		posicao_local += direcao_spawnar
 		
 		#Atualizar variavel do objeto
 		objeto_corpo.posicao_atual = posicao_local
-		objeto_corpo.posicao_ant = Vector2(posicao_local.x - 1, posicao_local.y)
+		objeto_corpo.posicao_ant += posicao_local + direcao_spawnar
 		
 		#Atualizar posição do Objeto
 		var posicao_pixel = Grid.gridParaPixels(posicao_local, offset)
@@ -107,6 +117,9 @@ func mover():
 	
 	#Reiniciar Tempo
 	$move_timer.start()
+	
+	#Grid
+	#Grid.update()
 	pass
 
 #Função para atualizar as referências
@@ -132,8 +145,12 @@ func colidirBody(body):
 func colidirArea(area):
 	#Comer Maça
 	if area.is_in_group("fruta"):
+		
 		#Excluir Maça
 		area.get_owner().queue_free()
+		
+		#Adicionar pontuação
+		emit_signal("score", 10)
 		
 		#Instanciar o corpo
 		var objeto_corpo = corpo.instance()

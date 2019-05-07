@@ -2,7 +2,7 @@
 
 [ext_resource path="res://04.png" type="Texture" id=1]
 
-[sub_resource type="Shader" id=3]
+[sub_resource type="Shader" id=1]
 code = "shader_type canvas_item;
 
 float random (vec3 i){
@@ -66,19 +66,20 @@ void fragment()
     
 	vec4 col = vec4(fc*vec3(28.0,10.0+-1.0*length(uv+vec2(0.0,1.0)),6.4)*0.6/length(uv+vec2(0.0,1.0))*1.0,1.0);
 	
-	COLOR = col;
+	//COLOR = col;
+	COLOR = texture(TEXTURE, UV * (col.xy + col.zw));
 }
 "
 
-[sub_resource type="ShaderMaterial" id=4]
-shader = SubResource( 3 )
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
 
 [node name="Shader01" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="Sprite" type="Sprite" parent="."]
-material = SubResource( 4 )
-position = Vector2( 464.7, 332.953 )
+material = SubResource( 2 )
+position = Vector2( 506.943, 301.45 )
+scale = Vector2( 2.04881, 1.25731 )
 texture = ExtResource( 1 )
-

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scenes/Snake2D.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Snake/snake-graphics.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Snake/Snake.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 7.61712, 6.70132 )
@@ -13,13 +13,14 @@ script = ExtResource( 1 )
 scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 2 )
 region_enabled = true
-region_rect = Rect2( 256, 0, 64, 64 )
+region_rect = Rect2( 192, 0, 64, 64 )
 
 [node name="move_timer" type="Timer" parent="."]
 wait_time = 0.1
 one_shot = true
 
 [node name="colisor" type="Area2D" parent="."]
+editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="colisor"]
 shape = SubResource( 1 )
@@ -48,4 +49,5 @@ limit_left = 0
 limit_top = 0
 limit_right = 640
 limit_bottom = 960
-
+limit_smoothed = true
+smoothing_enabled = true

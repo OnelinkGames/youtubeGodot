@@ -1,9 +1,9 @@
 extends Node2D
 
 #Variaveis da Grid
-var largura = 40
-var altura = 60
-var tamanhoBloco = 16
+export var largura = 0
+export var altura = 0
+export var tamanhoBloco = 0
 
 #Variaveis Internas
 var grid #Minha Grid

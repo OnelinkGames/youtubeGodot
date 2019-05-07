@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/snake-graphics.png-ae1a42d1ed9636d5902eb59f8a88dd81.stex"
+path="res://.import/Screen Tutoriais.png-16e997fdb038b12c9c87c251d63a76a8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Snake/snake-graphics.png"
-dest_files=[ "res://.import/snake-graphics.png-ae1a42d1ed9636d5902eb59f8a88dd81.stex" ]
+source_file="res://Screen Tutoriais.png"
+dest_files=[ "res://.import/Screen Tutoriais.png-16e997fdb038b12c9c87c251d63a76a8.stex" ]
 
 [params]
 

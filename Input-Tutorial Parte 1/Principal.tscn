@@ -3,7 +3,4 @@
 [ext_resource path="res://Principal.gd" type="Script" id=1]
 
 [node name="Principal" type="Node2D"]
-
 script = ExtResource( 1 )
-
-

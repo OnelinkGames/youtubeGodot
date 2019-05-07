@@ -68,7 +68,8 @@ void fragment()
 	vec4 color = mix(vec4(0.0), col, pow(glow*2.0,4.0));
 	
 	vec4 finalColor = mix(vec4(1.), mix(vec4(1.,.5,.1,1.),vec4(0.1,.5,1.,1.),p.y*.02+.4), pow(glow*2.,4.));
-	COLOR = finalColor;
+	COLOR = texture(TEXTURE, UV * (finalColor.xy * finalColor.wz));
+	//COLOR = finalColor;
 
 }"
 
@@ -79,6 +80,6 @@ shader = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
 material = SubResource( 2 )
-position = Vector2( 71.8179, 172.029 )
+position = Vector2( 586.295, 246.17 )
+scale = Vector2( 1.78311, 1.59852 )
 texture = ExtResource( 1 )
-

@@ -6,7 +6,12 @@
 ;   [section] ; section goes between []
 ;   param=value ; assign values to parameters
 
-config_version=3
+config_version=4
+
+_global_script_classes=[  ]
+_global_script_class_icons={
+
+}
 
 [application]
 
@@ -16,13 +21,22 @@ config/icon="res://icon.png"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "codeandweb.texturepacker" )
+enabled=PoolStringArray(  )
 
 [input]
 
-direita=[  ]
-esquerda=[  ]
-pulo=[  ]
+direita={
+"deadzone": 0.5,
+"events": [  ]
+}
+esquerda={
+"deadzone": 0.5,
+"events": [  ]
+}
+pulo={
+"deadzone": 0.5,
+"events": [  ]
+}
 
 [rendering]
 
