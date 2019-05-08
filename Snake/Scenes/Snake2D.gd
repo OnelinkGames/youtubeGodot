@@ -152,6 +152,9 @@ func colidirArea(area):
 		#Adicionar pontuação
 		emit_signal("score", 10)
 		
+		#Som
+		$eat.play()
+		
 		#Instanciar o corpo
 		var objeto_corpo = corpo.instance()
 		
@@ -166,15 +169,16 @@ func colidirArea(area):
 	
 	#Colidir Corpo
 	if area.is_in_group("corpo"):
-		set_process(false)
-		$move_timer.stop()
 		destruir()
 
 #Função para Destruir o personagem
 func destruir():
+	set_process(false)
+	$move_timer.stop()
 	$Sprite.visible = false
 	$Particles2D.emitting = true
 	$tempo_morrer.start()
+	$die.play()
 	for i in range(referencias.size()):
 		if i > 0:
 			referencias[i].destruir()
@@ -182,6 +186,7 @@ func destruir():
 #Função para tirar o objeto da tela.
 func libertar():
 	queue_free()
+	get_tree().change_scene("res://Scenes/Main.tscn")
 
 #Função de Animar
 func animar(i):
