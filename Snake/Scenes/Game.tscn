@@ -5,7 +5,7 @@
 [ext_resource path="res://Scenes/Snake2D.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Assets/Bricks/Stone.tres" type="TileSet" id=4]
 [ext_resource path="res://Scenes/Gui.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Assets/Sounds/bgMusic.wav" type="AudioStream" id=6]
+[ext_resource path="res://Assets/Sounds/Arcade-Puzzler.ogg" type="AudioStream" id=6]
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 1 )
