@@ -42,7 +42,7 @@ func _ready():
 	
 	#Recuperar a posição atual
 	posicao_atual = Grid.pixelsParaGrid(position, offset)
-	posicao_ant = Vector2(posicao_atual.x - 1, posicao_atual.y)
+	posicao_ant = Vector2(posicao_atual.x - direcao_spawnar.x, posicao_atual.y - direcao_spawnar.y)
 	
 	#Adicionar referência da Cabeça da Snake
 	referencias.append(self)
@@ -133,7 +133,6 @@ func atualizar_referencias(pos):
 				referencias[i].mover(minha_posicao, true)
 			minha_posicao = referencias[i].posicao_ant
 			animar(i)
-			#Grid.update()
 
 #Função para Colidir contra objetos
 func colidirBody(body):

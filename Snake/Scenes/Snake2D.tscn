@@ -22,7 +22,6 @@ wait_time = 0.3
 one_shot = true
 
 [node name="colisor" type="Area2D" parent="."]
-editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="colisor"]
 shape = SubResource( 1 )
