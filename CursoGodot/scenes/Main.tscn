@@ -89,4 +89,3 @@ motion_mirroring = Vector2( 442, 255 )
 scale = Vector2( 1.16, 1.2 )
 texture = ExtResource( 10 )
 centered = false
-

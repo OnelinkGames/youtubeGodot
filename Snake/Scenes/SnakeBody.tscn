@@ -62,7 +62,7 @@ scale = Vector2( 0.25, 0.25 )
 z_index = -1
 texture = ExtResource( 2 )
 region_enabled = true
-region_rect = Rect2( 128, 0, 64, 64 )
+region_rect = Rect2( 64, 0, 64, 64 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/cauda = SubResource( 1 )
