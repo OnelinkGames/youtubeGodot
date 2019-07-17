@@ -136,8 +136,6 @@ func atualizar_referencias(pos):
 
 #Função para Colidir contra objetos
 func colidirBody(body):
-	set_process(false)
-	$move_timer.stop()
 	destruir()
 
 #Função para comer as frutas e Colidir no Proprio Corpo
