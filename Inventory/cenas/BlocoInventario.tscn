@@ -1,0 +1,78 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://cenas/BlocoInventario.gd" type="Script" id=1]
+[ext_resource path="res://assets/sprites/inventory/block.png" type="Texture" id=2]
+[ext_resource path="res://assets/sprites/itens/armor_body_t.png" type="Texture" id=3]
+[ext_resource path="res://cenas/Itens/Armadura.gd" type="Script" id=4]
+[ext_resource path="res://assets/sprites/itens/axe_t.png" type="Texture" id=5]
+[ext_resource path="res://cenas/Itens/Machado.gd" type="Script" id=6]
+[ext_resource path="res://assets/sprites/itens/food_t.png" type="Texture" id=7]
+[ext_resource path="res://cenas/Itens/Comida.gd" type="Script" id=8]
+[ext_resource path="res://assets/sprites/itens/gold_t.png" type="Texture" id=9]
+[ext_resource path="res://cenas/Itens/Ouro.gd" type="Script" id=10]
+[ext_resource path="res://assets/sprites/itens/bag_t.png" type="Texture" id=11]
+[ext_resource path="res://cenas/Itens/Mala.gd" type="Script" id=12]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 14.8502, 14.4619 )
+
+[node name="BlocoInventario" type="Node2D"]
+pause_mode = 2
+modulate = Color( 0.98, 0.44, 0, 1 )
+script = ExtResource( 1 )
+
+[node name="Bloco" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Area2D" type="Area2D" parent="Bloco"]
+pause_mode = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloco/Area2D"]
+position = Vector2( 16.0729, 15.8888 )
+shape = SubResource( 1 )
+
+[node name="Itens" type="Node2D" parent="."]
+
+[node name="Armadura" type="Sprite" parent="Itens"]
+visible = false
+position = Vector2( 14.817, 16.8858 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+script = ExtResource( 4 )
+
+[node name="Machado" type="Sprite" parent="Itens"]
+visible = false
+position = Vector2( 16.1723, 16.6479 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 5 )
+script = ExtResource( 6 )
+
+[node name="Comida" type="Sprite" parent="Itens"]
+visible = false
+position = Vector2( 15.4588, 16.6479 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 7 )
+script = ExtResource( 8 )
+
+[node name="Ouro" type="Sprite" parent="Itens"]
+visible = false
+position = Vector2( 16.6479, 14.5075 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 9 )
+script = ExtResource( 10 )
+
+[node name="Mala" type="Sprite" parent="Itens"]
+visible = false
+position = Vector2( 15.1531, 16.0023 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 11 )
+script = ExtResource( 12 )
+
+[node name="Armadura_Escura" type="Sprite" parent="Itens"]
+visible = false
+modulate = Color( 0.913725, 0.156863, 0.156863, 1 )
+position = Vector2( 14.817, 16.8858 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+script = ExtResource( 4 )
