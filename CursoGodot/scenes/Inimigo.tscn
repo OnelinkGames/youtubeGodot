@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=2]
 
-[ext_resource path="res://scenes/Inimigo.gd" type="Script" id=1]
+[ext_resource path="res://scenes/Inimigo.cs" type="Script" id=1]
 [ext_resource path="res://assets/sprites/enemy/inimigo.png" type="Texture" id=2]
 [ext_resource path="res://assets/sounds/sfx/morder.wav" type="AudioStream" id=3]
 [ext_resource path="res://assets/sounds/sfx/explodir.wav" type="AudioStream" id=4]
@@ -248,8 +248,9 @@ script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
+flip_h = true
 region_enabled = true
-region_rect = Rect2( 14, 20.25, 38.25, 45.75 )
+region_rect = Rect2( 13, 19, 46, 50.25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 1.28818, 12.6978 )
@@ -264,14 +265,12 @@ anims/paradoEsquerda = SubResource( 5 )
 [node name="bocaInimigo" type="Area2D" parent="." groups=[
 "inimigo",
 ]]
-editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bocaInimigo"]
-position = Vector2( -5.88882, -8.46519 )
+position = Vector2( 9.2013, -9.75337 )
 shape = SubResource( 6 )
 
 [node name="areaInimigo" type="Area2D" parent="."]
-editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="areaInimigo"]
 shape = SubResource( 7 )
@@ -295,4 +294,3 @@ stream = ExtResource( 3 )
 
 [node name="explodir" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 4 )
-

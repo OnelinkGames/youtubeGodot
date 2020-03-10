@@ -1,6 +1,6 @@
 [gd_scene load_steps=41 format=2]
 
-[ext_resource path="res://cenas/Personagem.gd" type="Script" id=1]
+[ext_resource path="res://cenas/Personagem.cs" type="Script" id=1]
 [ext_resource path="res://recursos/graficos/png/Run (9).png" type="Texture" id=2]
 [ext_resource path="res://recursos/graficos/png/Jump (1).png" type="Texture" id=3]
 [ext_resource path="res://recursos/graficos/png/Jump (2).png" type="Texture" id=4]
@@ -72,7 +72,7 @@ script = ExtResource( 1 )
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 1 )
 animation = "andando"
-frame = 10
+frame = 11
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

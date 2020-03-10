@@ -1,0 +1,6 @@
+/home/andrius/Documentos/Godot Project/youtubeGodot/Dash/.mono/temp/bin/Tools/Dash.dll
+/home/andrius/Documentos/Godot Project/youtubeGodot/Dash/.mono/temp/bin/Tools/Dash.pdb
+/home/andrius/Documentos/Godot Project/youtubeGodot/Dash/.mono/temp/obj/Tools/Dash.csprojAssemblyReference.cache
+/home/andrius/Documentos/Godot Project/youtubeGodot/Dash/.mono/temp/obj/Tools/Dash.csproj.CoreCompileInputs.cache
+/home/andrius/Documentos/Godot Project/youtubeGodot/Dash/.mono/temp/obj/Tools/Dash.dll
+/home/andrius/Documentos/Godot Project/youtubeGodot/Dash/.mono/temp/obj/Tools/Dash.pdb

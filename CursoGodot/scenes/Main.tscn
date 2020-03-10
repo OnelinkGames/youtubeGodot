@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://scenes/Main.gd" type="Script" id=1]
+[ext_resource path="res://scenes/Main.cs" type="Script" id=1]
 [ext_resource path="res://assets/sprites/tileset/myTileset.tres" type="TileSet" id=2]
 [ext_resource path="res://scenes/Personagem.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/Inimigo.tscn" type="PackedScene" id=4]

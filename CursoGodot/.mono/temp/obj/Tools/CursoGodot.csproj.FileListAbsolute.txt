@@ -1,0 +1,6 @@
+/home/andrius/Documentos/Godot Project/youtubeGodot/CursoGodot/.mono/temp/bin/Tools/CursoGodot.dll
+/home/andrius/Documentos/Godot Project/youtubeGodot/CursoGodot/.mono/temp/bin/Tools/CursoGodot.pdb
+/home/andrius/Documentos/Godot Project/youtubeGodot/CursoGodot/.mono/temp/obj/Tools/CursoGodot.csprojAssemblyReference.cache
+/home/andrius/Documentos/Godot Project/youtubeGodot/CursoGodot/.mono/temp/obj/Tools/CursoGodot.csproj.CoreCompileInputs.cache
+/home/andrius/Documentos/Godot Project/youtubeGodot/CursoGodot/.mono/temp/obj/Tools/CursoGodot.dll
+/home/andrius/Documentos/Godot Project/youtubeGodot/CursoGodot/.mono/temp/obj/Tools/CursoGodot.pdb
