@@ -43,17 +43,17 @@ public class Personagem : KinematicBody2D
     public override void _Ready()
     {
         //Inicializar Nodes
-        MyAreaDano = GetNode<Area2D>("areaDano");
-        MyAreaBater = GetNode<Area2D>("areaBater");
-        MyTempoMorrer = GetNode<Timer>("tempoMorrer");
-        MyTempoInvencivel = GetNode<Timer>("tempo_invencivel");
-        MyAnimationPlayer = GetNode<AnimationPlayer>("AnimationPlayer");
-        MyCamera2D = GetNode<Camera2D>("Camera2D");
-        MySprite = GetNode<Sprite>("Sprite");
-        MyParticles2D = GetNode<Particles2D>("Particles2D");
-        MyTween = GetNode<Tween>("Tween");
-        MyPulo = GetNode<AudioStreamPlayer2D>("pulo");
-        MyDano = GetNode<AudioStreamPlayer2D>("dano");
+        MyAreaDano = GetNode("areaDano") as Area2D;
+        MyAreaBater = GetNode("areaBater") as Area2D;
+        MyTempoMorrer = GetNode("tempoMorrer") as Timer;
+        MyTempoInvencivel = GetNode("tempo_invencivel") as Timer;
+        MyAnimationPlayer = GetNode("AnimationPlayer") as AnimationPlayer;
+        MyCamera2D = GetNode("Camera2D") as Camera2D;
+        MySprite = GetNode("Sprite") as Sprite;
+        MyParticles2D = GetNode("Particles2D") as Particles2D;
+        MyTween = GetNode("Tween") as Tween;
+        MyPulo = GetNode("pulo") as AudioStreamPlayer2D;
+        MyDano = GetNode("dano") as AudioStreamPlayer2D;
 
         //Conectar a Area2D que vai detectar se o Personagem colidiu com o Inimigo
         MyAreaDano.Connect("area_entered", this, "OnAreaDanoAreaEntered");

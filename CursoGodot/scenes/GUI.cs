@@ -14,8 +14,8 @@ public class GUI : Control
     public override void _Ready()
     {
         //Inicializar Nodes
-        MyProgressBar = GetNode<TextureProgress>("ProgressBar");
-        MyScore = GetNode<RichTextLabel>("score");
+        MyProgressBar = GetNode("ProgressBar") as TextureProgress;
+        MyScore = GetNode("score") as RichTextLabel;
     }
 
     //Função para diminuir o hp

@@ -11,8 +11,8 @@ public class Main : Node2D
     public override void _Ready()
     {
         //Inicializar Nodes
-        MyPersonagem = GetNode<KinematicBody2D>("Personagem");
-        MyGui = GetNode<Control>("guiCanvas/GUI");
+        MyPersonagem = GetNode("Personagem") as KinematicBody2D;
+        MyGui = GetNode("guiCanvas/GUI") as Control;
 
         //Conectar dano
         MyPersonagem.Connect("LevarDano", MyGui, "Dano");

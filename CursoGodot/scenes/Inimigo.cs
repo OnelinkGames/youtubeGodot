@@ -22,14 +22,14 @@ public class Inimigo : StaticBody2D
     public override void _Ready()
     {
         //Inicializar Nodes
-        MyAnimationPlayer = GetNode<AnimationPlayer>("AnimationPlayer");
-        MyAreaInimigo = GetNode<Area2D>("areaInimigo");
-        MyBocaInimigo = GetNode<Area2D>("bocaInimigo");
-        MyDestroyTimer = GetNode<Timer>("destroy_timer");
-        MySprite = GetNode<Sprite>("Sprite");
-        MyTween = GetNode<Tween>("Tween");
-        MyParticles2D = GetNode<Particles2D>("Particles2D");
-        MyExplodir = GetNode<AudioStreamPlayer2D>("explodir");
+        MyAnimationPlayer = GetNode("AnimationPlayer") as AnimationPlayer;
+        MyAreaInimigo = GetNode("areaInimigo") as Area2D;
+        MyBocaInimigo = GetNode("bocaInimigo") as Area2D;
+        MyDestroyTimer = GetNode("destroy_timer") as Timer;
+        MySprite = GetNode("Sprite") as Sprite;
+        MyTween = GetNode("Tween") as Tween;
+        MyParticles2D = GetNode("Particles2D") as Particles2D;
+        MyExplodir = GetNode("explodir") as AudioStreamPlayer2D;
 
         //Conectar o AnimationPlayer quando terminar a animação
         MyAnimationPlayer.Connect("animation_finished", this, "AnimacaoTerminada");
