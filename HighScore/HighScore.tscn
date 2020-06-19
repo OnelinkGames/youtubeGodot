@@ -9,7 +9,6 @@ script = ExtResource( 1 )
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
 
 [node name="Score" type="Control" parent="."]
-editor/display_folded = true
 margin_left = 8.31866
 margin_top = -8.57246
 margin_right = 48.319
@@ -46,7 +45,6 @@ margin_bottom = 113.55
 text = "Enviar"
 
 [node name="Nome" type="Control" parent="."]
-editor/display_folded = true
 visible = false
 margin_left = 214.586
 margin_top = 13.0346
@@ -83,7 +81,6 @@ margin_bottom = 113.0
 text = "Enviar"
 
 [node name="Log" type="Control" parent="."]
-editor/display_folded = true
 margin_left = -14.6654
 margin_top = 466.501
 margin_right = 25.3346
@@ -109,7 +106,6 @@ scroll_horizontal_enabled = false
 margin_bottom = 14.0
 
 [node name="ScoreTable" type="Control" parent="."]
-editor/display_folded = true
 visible = false
 margin_left = 19.4698
 margin_top = 156.501
@@ -120,7 +116,6 @@ __meta__ = {
 }
 
 [node name="Panel" type="Panel" parent="ScoreTable"]
-editor/display_folded = true
 margin_right = 371.0
 margin_bottom = 310.0
 
@@ -137,4 +132,3 @@ margin_top = 10.0
 margin_right = 355.0
 margin_bottom = 300.0
 text = "Scores:"
-

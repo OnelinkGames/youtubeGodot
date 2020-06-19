@@ -1,10 +1,10 @@
 extends Node2D
 
 #Constantes
-const PASSCODE = "MyPassCodeDude"
-const URLCONSULTAR = "http://localhost/HighScore/consultarHighScore.php"
-const URLCADASTRAR = "http://localhost/HighScore/cadastrarHighScore.php"
-const URLMOSTRAR = "http://localhost/HighScore/mostrarHighScore.php"
+const PASSCODE = "12345678"
+const URLCONSULTAR = "http://localhost/phpFiles/consultarHighScore.php"
+const URLCADASTRAR = "http://localhost/phpFiles/cadastrarHighScore.php"
+const URLMOSTRAR = "http://localhost/phpFiles/mostrarHighScore.php"
 
 #Variaveis
 var score

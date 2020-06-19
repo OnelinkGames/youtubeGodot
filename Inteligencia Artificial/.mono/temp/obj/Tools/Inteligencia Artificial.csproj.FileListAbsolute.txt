@@ -1,0 +1,18 @@
+/home/andrius/Documentos/Godot Project/Godot 3.1/Inteligencia Artificial/.mono/temp/obj/Tools/Inteligencia Artificial.csprojAssemblyReference.cache
+/home/andrius/Documentos/Godot Project/Godot 3.1/Inteligencia Artificial/.mono/temp/obj/Tools/Inteligencia Artificial.csproj.CoreCompileInputs.cache
+/home/andrius/Documentos/Godot Project/Godot 3.1/Inteligencia Artificial/.mono/temp/bin/Tools/Inteligencia Artificial.dll
+/home/andrius/Documentos/Godot Project/Godot 3.1/Inteligencia Artificial/.mono/temp/bin/Tools/Inteligencia Artificial.pdb
+/home/andrius/Documentos/Godot Project/Godot 3.1/Inteligencia Artificial/.mono/temp/obj/Tools/Inteligencia Artificial.dll
+/home/andrius/Documentos/Godot Project/Godot 3.1/Inteligencia Artificial/.mono/temp/obj/Tools/Inteligencia Artificial.pdb
+/home/andrius-sonda/Documentos/GODOT/godot_private/Inteligencia Artificial/.mono/temp/bin/Tools/Inteligencia Artificial.dll
+/home/andrius-sonda/Documentos/GODOT/godot_private/Inteligencia Artificial/.mono/temp/bin/Tools/Inteligencia Artificial.pdb
+/home/andrius-sonda/Documentos/GODOT/godot_private/Inteligencia Artificial/.mono/temp/obj/Tools/Inteligencia Artificial.csprojAssemblyReference.cache
+/home/andrius-sonda/Documentos/GODOT/godot_private/Inteligencia Artificial/.mono/temp/obj/Tools/Inteligencia Artificial.csproj.CoreCompileInputs.cache
+/home/andrius-sonda/Documentos/GODOT/godot_private/Inteligencia Artificial/.mono/temp/obj/Tools/Inteligencia Artificial.dll
+/home/andrius-sonda/Documentos/GODOT/godot_private/Inteligencia Artificial/.mono/temp/obj/Tools/Inteligencia Artificial.pdb
+C:\Users\andrius-sonda\Documents\GODOT\godot_private\Inteligencia Artificial\.mono\temp\bin\Tools\Inteligencia Artificial.dll
+C:\Users\andrius-sonda\Documents\GODOT\godot_private\Inteligencia Artificial\.mono\temp\bin\Tools\Inteligencia Artificial.pdb
+C:\Users\andrius-sonda\Documents\GODOT\godot_private\Inteligencia Artificial\.mono\temp\obj\Tools\Inteligencia Artificial.csprojAssemblyReference.cache
+C:\Users\andrius-sonda\Documents\GODOT\godot_private\Inteligencia Artificial\.mono\temp\obj\Tools\Inteligencia Artificial.csproj.CoreCompileInputs.cache
+C:\Users\andrius-sonda\Documents\GODOT\godot_private\Inteligencia Artificial\.mono\temp\obj\Tools\Inteligencia Artificial.dll
+C:\Users\andrius-sonda\Documents\GODOT\godot_private\Inteligencia Artificial\.mono\temp\obj\Tools\Inteligencia Artificial.pdb

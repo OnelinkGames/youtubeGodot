@@ -1,0 +1,133 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://assets/sprites/ninja_f.png" type="Texture" id=1]
+[ext_resource path="res://scripts/Inimigo.cs" type="Script" id=2]
+[ext_resource path="res://assets/fonts/badrobot.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 137.026
+
+[sub_resource type="Animation" id=2]
+resource_name = "andarBaixo"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Rect2( 66, 73, 29, 36 ), Rect2( 33, 71, 31, 36 ), Rect2( 1, 72, 28, 37 ), Rect2( 33, 71, 31, 36 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "andarCima"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Rect2( 66, 0, 29, 37 ), Rect2( 33, 0, 30, 36 ), Rect2( 1, 0, 29, 37 ), Rect2( 32, 0, 31, 37 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Rect2( 64, 37, 28, 37 ), Rect2( 32, 35, 27, 36 ), Rect2( 0, 37, 26, 36 ), Rect2( 33, 35, 25, 36 ) ]
+}
+
+[sub_resource type="DynamicFont" id=5]
+outline_size = 2
+outline_color = Color( 0.0392157, 0.0392157, 0.0392157, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="CircleShape2D" id=6]
+radius = 17.1196
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 8.50131, 8.84348 )
+
+[node name="Inimigo" type="KinematicBody2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 10.2972, 10.9615 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 37, 26, 36 )
+
+[node name="DetectorSom" type="Area2D" parent="."]
+position = Vector2( 11.4305, 14.7018 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectorSom"]
+shape = SubResource( 1 )
+
+[node name="TimerPatrulha" type="Timer" parent="."]
+process_mode = 0
+wait_time = 2.0
+one_shot = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/andarBaixo = SubResource( 2 )
+anims/andarCima = SubResource( 3 )
+anims/andarHorizontal = SubResource( 4 )
+
+[node name="DetectorVisao" type="Area2D" parent="."]
+position = Vector2( 13.1542, 12.3805 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="DetectorVisao"]
+position = Vector2( -14.878, -11.6067 )
+polygon = PoolVector2Array( 14.8739, 12.5885, 106.18, -23.7791, 209.092, -67.1106, 250, 5, 214.509, 78.3597, 104.632, 39.6708 )
+
+[node name="Alerta" type="Label" parent="."]
+visible = false
+margin_left = 8.36875
+margin_top = -28.4078
+margin_right = 24.3688
+margin_bottom = -7.40781
+custom_fonts/font = SubResource( 5 )
+text = "!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TimerAlerta" type="Timer" parent="."]
+process_mode = 0
+wait_time = 2.0
+one_shot = true
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="AtaquePersonagem" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AtaquePersonagem"]
+position = Vector2( 11.0956, 11.3876 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 10.3231, 19.0498 )
+shape = SubResource( 7 )

@@ -4,3 +4,5 @@
 /home/andrius/Documentos/Godot Project/youtubeGodot/Dash/.mono/temp/obj/Tools/Dash.csproj.CoreCompileInputs.cache
 /home/andrius/Documentos/Godot Project/youtubeGodot/Dash/.mono/temp/obj/Tools/Dash.dll
 /home/andrius/Documentos/Godot Project/youtubeGodot/Dash/.mono/temp/obj/Tools/Dash.pdb
+C:\Users\andrius-sonda\Documents\GODOT\youtubeGodot\Dash\.mono\temp\obj\Tools\Dash.dll
+C:\Users\andrius-sonda\Documents\GODOT\youtubeGodot\Dash\.mono\temp\obj\Tools\Dash.pdb
