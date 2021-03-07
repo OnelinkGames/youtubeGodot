@@ -1,0 +1,6 @@
+C:\Users\andrius-sonda\Documents\GODOT\youtubeGodot\CursoGodot\.mono\temp\bin\Debug\CursoGodot.dll
+C:\Users\andrius-sonda\Documents\GODOT\youtubeGodot\CursoGodot\.mono\temp\bin\Debug\CursoGodot.pdb
+C:\Users\andrius-sonda\Documents\GODOT\youtubeGodot\CursoGodot\.mono\temp\obj\Debug\CursoGodot.csprojAssemblyReference.cache
+C:\Users\andrius-sonda\Documents\GODOT\youtubeGodot\CursoGodot\.mono\temp\obj\Debug\CursoGodot.csproj.CoreCompileInputs.cache
+C:\Users\andrius-sonda\Documents\GODOT\youtubeGodot\CursoGodot\.mono\temp\obj\Debug\CursoGodot.dll
+C:\Users\andrius-sonda\Documents\GODOT\youtubeGodot\CursoGodot\.mono\temp\obj\Debug\CursoGodot.pdb

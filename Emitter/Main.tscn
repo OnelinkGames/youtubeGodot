@@ -55,7 +55,6 @@ position = Vector2( 30.5267, 257.772 )
 scale = Vector2( 0.2, 0.2 )
 
 [node name="Shoot" parent="Personagem" instance=ExtResource( 6 )]
-editor/display_folded = true
 position = Vector2( -152.633, -1288.86 )
 scale = Vector2( 5, 5 )
 object = ExtResource( 7 )
@@ -93,4 +92,3 @@ area = Rect2( 0, 0, 640, 480 )
 size_diff = Vector2( 0, 480 )
 
 [node name="Particles" type="Node2D" parent="."]
-
